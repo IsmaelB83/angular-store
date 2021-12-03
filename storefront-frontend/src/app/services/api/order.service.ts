@@ -42,7 +42,7 @@ export class OrderService {
       'content-type': 'application/json',
       'Authorization': `Bearer ${jwt}`
     });
-    return this.http.post<Order>('http://127.0.0.1:3000/users/1/orders', {}, { headers });
+    return this.http.post<Order>(`${API_BASE}/${userId}/orders`, {}, { headers });
   }
 
   public completeOrder(userId: number, jwt: string, id: number): Observable<Order> {
