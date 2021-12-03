@@ -7,7 +7,7 @@ orbs:
 jobs:
   build:
     docker:
-      - image: 'cimg/base:2021.01'
+      - image: 'cimg/node:14.18.2'
     steps:
       - node/install
       - checkout
