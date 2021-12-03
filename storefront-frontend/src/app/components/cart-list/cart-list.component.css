@@ -1,0 +1,12 @@
+.cart-total {
+  font-size: 20px;
+}
+
+.cart-total .number {
+  margin-left: 10px;
+}
+
+.cart-total .number span {
+  margin-left: 10px;
+  font-size: 30px;
+}

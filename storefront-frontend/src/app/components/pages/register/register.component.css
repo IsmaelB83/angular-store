@@ -1,0 +1,63 @@
+.container {
+  background-color: transparent;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.custom-form {
+  min-width: 300px;
+  max-width: 60%;
+  margin: 0px auto;
+  padding: 1.5rem 2rem;
+  border-radius: 2rem;
+  background-color: white;
+  box-shadow: 13px 13px 20px #cbced1;
+  color: black;
+}
+
+.custom-form h1 {
+  text-align: center;
+  font-size: 2rem;
+}
+
+.custom-form input {
+  display: block;
+  margin: 2rem 0;
+  width: 100%;
+  padding: 1rem;
+  border: none;
+  border-radius: 1.5rem;
+  font-size: 0.875rem;
+  background: #ebf5fc;
+}
+
+.custom-form button {
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+  border: none;
+  font-size: 0.875rem;
+  color: white;
+  font-weight: bold;
+  width: 100%;
+  padding: .9rem 1rem;
+  border-radius: 1.5rem;
+  background-color: #007BFF;
+  cursor: pointer;
+}
+
+.custom-form button:hover {
+  background-color: #006ee4;
+}
+
+.login-link {
+  text-align: center;
+  margin: 20px 0 0 0;
+}
+
+.loginbutton .spinner {
+  display: block;
+  width: 50px;
+  margin: 20px;
+  margin: 20px auto;
+}

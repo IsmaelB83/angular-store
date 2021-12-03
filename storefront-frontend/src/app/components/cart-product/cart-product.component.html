@@ -1,0 +1,11 @@
+<article id="{{ line.productid }}" class="CartList__Product">
+  <h3>{{ line.name }}</h3>
+  <div class="CartList__Product-content">
+    <img src="{{ line.photo }}" alt="{{ line.name }}">
+    <div class="text">
+        <p>{{ line.price }}<span> $</span></p>
+        <label for="quantity">Quantity </label>
+        <input type="number" [(ngModel)]="line.quantity" (ngModelChange)="onChangeQuantity($event)" min="0">
+    </div>
+  </div>
+</article>

@@ -1,0 +1,26 @@
+<article class="productListItem" id="{{product.id}}">
+  <a routerLink="products/{{product.id}}" [state]="product" (addToCart)="onAddToCart()">
+    <img src="{{ product.photo }}" alt="{{product.name}}">
+  </a>
+  <a class="productListItem--title" routerLink="products/{{product.id}}" [state]="product" (addToCart)="onAddToCart()">
+    <h3>{{ product.name }}</h3>
+  </a>
+  <p class="productListItem--category">{{ product.category }}</p>
+  <p class="productListItem--price">{{ product.price }}<span class="currency">$</span></p>
+  <div *ngIf="addToCart" class="quantity">
+    <select name="quantity" form="carform" [(ngModel)]="quantity">
+      <option [ngValue]="0">0</option>
+      <option [ngValue]="1">1</option>
+      <option [ngValue]="2">2</option>
+      <option [ngValue]="3">3</option>
+      <option [ngValue]="4">4</option>
+      <option [ngValue]="5">5</option>
+      <option [ngValue]="6">6</option>
+      <option [ngValue]="7">7</option>
+      <option [ngValue]="8">8</option>
+      <option [ngValue]="9">9</option>
+      <option [ngValue]="10">10</option>
+    </select>
+    <button class="btn btn-primary" (click)="onAddToCart()">Add to cart</button>
+  </div>
+</article>

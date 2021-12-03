@@ -1,0 +1,37 @@
+<app-navbar active="cart"></app-navbar>
+<div class="container">
+  <div class="cart" *ngIf="order.status === 'active' && !order.lines.length">
+    <h1>Empty cart</h1>
+    <a routerLink="/">Return to product list</a>
+  </div>
+  <div class="cart" *ngIf="order.status === 'active' && order.lines.length > 0">
+    <h1>Cart</h1>
+    <div class="cart-content">
+      <app-cart-list
+        class="list"
+        [order]="order"
+        (changeOrder)="changeOrder($event)"
+      >
+      </app-cart-list>
+      <app-cart-form
+        class="form"
+        [active]="order.lines.length > 0"
+        (submitOrder)="submitOrder($event)"
+      >
+      </app-cart-form>
+    </div>
+  </div>
+  <div *ngIf="order.status === 'complete'">
+    <h1>Success</h1>
+    <p>Thank you <strong>{{fullName}}</strong></p>
+
+    <p>Your order number <strong>{{order.id}}</strong> with a total price of <strong>{{order.totalPrice}}</strong> has been placed</p>
+
+    <p>Products will be delivered to <strong>{{address}}</strong></p>
+    <p>Once the payment with credit card number <strong>{{card}}</strong> is completed</p>
+
+    <a routerLink="/">Return to product list</a>
+  </div>
+</div>
+<app-footer></app-footer>
+

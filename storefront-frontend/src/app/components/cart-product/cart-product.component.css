@@ -1,0 +1,33 @@
+.CartList__Product {
+  margin-top: 10px;
+  display: flex;
+  flex-direction: column;
+}
+
+.CartList__Product h3 {
+  font-size: 22px;
+  color: #33B5E5;
+}
+
+.CartList__Product-content {
+  display: flex;
+  flex-direction: row;
+}
+
+.CartList__Product-content p {
+  margin: 0;
+}
+
+.CartList__Product img {
+  width: 100px;
+  border-radius: 10px;
+  margin-right: 10px;
+}
+
+.CartList__Product label {
+  margin-right: 5px;
+}
+
+.CartList__Product input {
+  max-width: 40px;
+}

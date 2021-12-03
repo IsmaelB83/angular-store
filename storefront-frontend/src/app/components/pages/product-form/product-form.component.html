@@ -1,0 +1,43 @@
+<app-navbar active="newproduct"></app-navbar>
+<div class="container">
+  <div class="productform">
+    <h1>New Product</h1>
+    <img class="productphoto" src="{{product.photo}}" alt="{{product.name}}">
+    <form class="custom-form" method="post" (ngSubmit)="onSubmit()">
+      <input
+        type="name"
+        [(ngModel)]="product.name"
+        name="name"
+        placeholder="Name"
+        required="required"
+      />
+      <input
+        type="price"
+        [(ngModel)]="product.price"
+        name="price"
+        placeholder="Price"
+        required="required"
+      />
+      <input
+        type="category"
+        [(ngModel)]="product.category"
+        name="category"
+        placeholder="Category"
+        required="required"
+      />
+      <input
+        type="photo"
+        [(ngModel)]="product.photo"
+        name="photo"
+        placeholder="Photo Url"
+        required="required"
+      />
+      <div class="loginbutton">
+        <button type="submit" class="btn btn-primary">Create</button>
+        <img *ngIf="loading" class="spinner" src="assets/images/spinner.gif">
+      </div>
+    </form>
+
+  </div>
+</div>
+<app-footer></app-footer>

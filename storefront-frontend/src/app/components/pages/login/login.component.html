@@ -1,0 +1,30 @@
+<app-navbar active="login"></app-navbar>
+<div class="container">
+  <div class="login">
+    <form class="custom-form" method="post">
+      <h1>Login form</h1>
+      <input
+        type="email"
+        [(ngModel)]="email"
+        name="email"
+        placeholder="Enter email"
+        required="required"
+      />
+      <input
+        type="password"
+        [(ngModel)]="password"
+        name="password"
+        placeholder="Enter Password"
+        required="required"
+      />
+      <div class="loginbutton">
+        <button type="submit" (click)="login()">Log in</button>
+        <img *ngIf="loading" class="spinner" src="assets/images/spinner.gif">
+      </div>
+      <div class="login-link">
+        <a [routerLink]="['/register']" routerLinkActive="router-link-active" >Create an account</a>
+      </div>
+    </form>
+  </div>
+</div>
+<app-footer></app-footer>

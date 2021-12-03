@@ -1,0 +1,7 @@
+<div>
+  <app-cart-product *ngFor="let line of order.lines"
+    [line]="line"
+    (changeQuantity)="changeQuantity($event)">
+  </app-cart-product>
+  <p class="cart-total">TOTAL <strong class="number">{{ order.totalPrice }}<span>$</span></strong></p>
+</div>

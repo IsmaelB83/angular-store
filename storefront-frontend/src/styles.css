@@ -1,0 +1,46 @@
+ /* Simple reset */
+ *, *::before, *::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  font-size: 16px;
+  font-family: 'Lato', sans-serif;
+}
+
+body {
+    max-height: 100vh;
+    margin: 0;
+}
+
+ul, li {
+  list-style: none;
+  margin: 0;
+}
+
+img, embed, object, video {
+  max-width: 100%;
+  max-height: 100%;
+  width: 100%;
+}
+
+a {
+  text-decoration: none;
+}
+
+/* Layout */
+#root {
+  height: calc(100vh);
+  display: flex;
+  flex-direction: column;
+  background-color: #e8f9fc;
+}
+
+.container {
+  background-color: white;
+  padding: 10px;
+  height: calc(100vh - 120px);
+  overflow-y: auto;
+}

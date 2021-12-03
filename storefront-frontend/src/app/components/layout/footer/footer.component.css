@@ -1,0 +1,25 @@
+.Footer {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  text-align: left;
+  background-color: #33B5E5;
+  padding: 20px 0;
+  color: white;
+  text-transform: uppercase;
+  height: 60px;
+}
+
+.Footer p {
+  margin: 0;
+}
+
+.Footer a {
+  color: white;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.Footer a:hover {
+  font-weight: bold;
+}

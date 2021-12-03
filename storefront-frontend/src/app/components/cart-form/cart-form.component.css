@@ -1,0 +1,9 @@
+.cart-form {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+
+.cart-form label {
+  margin-right: 10px;
+}

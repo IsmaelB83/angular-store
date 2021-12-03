@@ -1,0 +1,13 @@
+<app-navbar active="products"></app-navbar>
+<div class="container">
+  <div class="productList">
+    <app-product-list-item *ngFor="let product of products"
+      [addToCart]="user.email !== ''"
+      [product]="product"
+      [quantity]="getProductQuantity(product.id)"
+      (addToCartEvent)="addToCart($event)"
+    >
+    </app-product-list-item>
+  </div>
+</div>
+<app-footer></app-footer>

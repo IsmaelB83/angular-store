@@ -1,0 +1,7 @@
+<nav class="NavBar">
+  <a [ngClass]="{active: active==='products'}" routerLink='/'>Products</a>
+  <a [ngClass]="{active: active==='cart'}" *ngIf="user.email" routerLink='/cart'>Cart</a>
+  <a [ngClass]="{active: active==='newproduct'}" *ngIf="user.email" routerLink='/products/new'>New Product</a>
+  <a *ngIf="!user.email; else elseBlock" [ngClass]="{active: active==='login'}" routerLink='/login'>Login</a>
+  <ng-template #elseBlock><a (click)="logout()">Logout</a></ng-template>
+</nav>

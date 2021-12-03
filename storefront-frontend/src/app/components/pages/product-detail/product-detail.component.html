@@ -1,0 +1,40 @@
+<app-navbar active="products"></app-navbar>
+<div class="container">
+  <article class="productDetail" id="{{product.id}}">
+    <div class="productDetail--caption">
+      <img src="{{ product.photo }}" alt="{{product.name}}">
+    </div>
+    <div class="productDetail--data">
+      <h3>{{ product.name }}</h3>
+      <p>Category {{ product.category }}</p>
+      <p>{{ product.price }}</p>
+
+      <div *ngIf="user.email">
+        <label for="quantity">Quantity:</label>
+        <select name="quantity" id="quantity" form="carform" [(ngModel)]="quantity">
+          <option [ngValue]="0">0</option>
+          <option [ngValue]="1">1</option>
+          <option [ngValue]="2">2</option>
+          <option [ngValue]="3">3</option>
+          <option [ngValue]="4">4</option>
+          <option [ngValue]="5">5</option>
+          <option [ngValue]="6">6</option>
+          <option [ngValue]="7">7</option>
+          <option [ngValue]="8">8</option>
+          <option [ngValue]="9">9</option>
+          <option [ngValue]="10">10</option>
+        </select>
+      </div>
+      <div *ngIf="user.email">
+        <button class="btn btn-primary" (click)="onAddToCart()">Add to cart </button>
+      </div>
+      <div>
+        <a routerLink="/">Back to product list</a>
+      </div>
+    </div>
+  </article>
+</div>
+<app-footer></app-footer>
+
+
+
