@@ -3,10 +3,10 @@
   "version": "0.0.0",
   "scripts": {
     "ng": "ng",
-    "start": "ng --openssl-legacy-provider serve",
+    "start": "ng serve",
     "build": "ng build -- openssl-legacy-provider",
-    "watch": "ng build --watch --configuration development  --openssl-legacy-provider",
-    "test": "ng test --openssl-legacy-provider",
+    "watch": "ng build --watch --configuration development",
+    "test": "ng test",
     "deploy": "chmod +x bin/deploy.sh && bin/deploy.sh"
   },
   "private": true,
