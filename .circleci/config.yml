@@ -16,7 +16,7 @@ jobs:
       - run:
           name: Install node@v14.18.1
           command: |
-            export NVM_DIR="/opt/circleci/.nvm"
+            export NVM_DIR="./.nvm"
             [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
             nvm install v14.18.1 && nvm alias default v14.18.1
             ./load-nvm.sh
