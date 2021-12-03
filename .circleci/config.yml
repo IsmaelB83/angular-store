@@ -34,18 +34,6 @@ jobs:
           command: |
             npm run frontend:build
       - run:
-          name: Front-End app
-          command: |
-            npm run frontend:deploy
-      - run:
-          name: Front-End Install
-          command: |
-            npm run frontend:install
-      - run:
-          name: Front-End Build
-          command: |
-            npm run frontend:build
-      - run:
-          name: Front-End app
+          name: Front-End Deploy
           command: |
             npm run frontend:deploy
