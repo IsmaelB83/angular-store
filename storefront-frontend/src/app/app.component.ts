@@ -2,7 +2,6 @@
 import { Component } from '@angular/core';
 import { Router } from '@angular/router';
 // Models
-import { User } from './model/user';
 // Services
 import { LocalStorageService } from './services/shared/local-storage.service';
 import { NotificationsService } from './services/shared/notifications.service';

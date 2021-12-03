@@ -14,6 +14,19 @@ jobs:
       - checkout
       - aws-cli/setup
       - run:
+          name: Install node@v14.18.1
+          command: |
+            export NVM_DIR="/opt/circleci/.nvm"
+            [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
+            nvm install v14.18.1 && nvm alias default v14.18.1
+            ./load-nvm.sh
+            nvm install v14.18.1
+            nvm alias default v14.18.1
+      - run: npm version
+      - run: |
+          ./load-nvm.sh
+          npm version
+      - run:
           name: Front-End Install
           command: |
             npm run frontend:install
