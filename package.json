@@ -1,0 +1,7 @@
+{
+  "scripts": {
+    "frontend:install": "cd storefront-frontend && npm install",
+    "frontend:build": "cd storefront-frontend && npm run build",
+    "frontend:deploy": "cd storefront-frontend &&  npm run deploy"
+  }
+}
