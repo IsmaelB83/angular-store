@@ -4,7 +4,7 @@
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
-    "build": "export SET NODE_OPTIONS=--openssl-legacy-provider && ng build",
+    "build": "ng build",
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
     "deploy": "chmod +x bin/deploy.sh && bin/deploy.sh"
