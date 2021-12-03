@@ -3,9 +3,9 @@
   "version": "0.0.0",
   "scripts": {
     "ng": "ng",
-    "start": "export SET NODE_OPTIONS=--openssl-legacy-provider && ng serve",
+    "start": "ng serve",
     "build": "export SET NODE_OPTIONS=--openssl-legacy-provider && ng build",
-    "watch": "export SET NODE_OPTIONS=--openssl-legacy-provider && ng build --watch --configuration development",
+    "watch": "ng build --watch --configuration development",
     "test": "ng test",
     "deploy": "chmod +x bin/deploy.sh && bin/deploy.sh"
   },
