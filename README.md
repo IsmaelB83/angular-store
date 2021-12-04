@@ -40,6 +40,8 @@ The config.yml file forces CircleCI to use node version 14.18.1. This is due to 
 
 For more information regarding CI/CD pipeline please refer to [CI/CD PILELINE](docs/CIRCLECI.md)
 
+![circleci_1](screenshots/circleci_build_01_overview.png)
+
 ## INSTRUCTIONS TO MANUAL INSTALLATION
 
 To download the repository

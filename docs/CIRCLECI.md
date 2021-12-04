@@ -6,6 +6,14 @@ Within folder .circleci you can find config.yml with all the steps preconfigured
 
 The config.yml file forces CircleCI to use node version 14.18.1. This is due to the existing problem in version 17.1 (which is the default stable version used by CircleCI at the moment) with crypto SSL (more info searching "node 17 digital envelope routines"). 
 
+# LAST BUILD
+
+![circleci_1](../screenshots/circleci_build_01_overview.png)
+![circleci_2](../screenshots/circleci_build_02_detail_1.png)
+![circleci_3](../screenshots/circleci_build_02_detail_2.png)
+
+# PIPELINE DOCUMENTATION
+
 * Step to install node@14.18.1
 ```
   - run: 
