@@ -1,3 +1,3 @@
-const API_SERVER = 'https://bernaldev.com'
+const API_SERVER = 'https://www.bernaldev.com'
 
 export default API_SERVER;
