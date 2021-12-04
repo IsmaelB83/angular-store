@@ -25,7 +25,7 @@ The express API is deployed in a Beanstalk service. This service needs to be pub
 
 Another important thing here is to configure in the beanstalk environment all the ENV variables required for the application to run (important to start express in 8081, which is the default port NGINX will redirect traffic):
 
-![AWS_BEANSTALK_4](../screenshots/aws_beanstalk_3.png)
+![AWS_BEANSTALK_4](../screenshots/aws_beanstalk_4.png)
 
 ## S3
 
