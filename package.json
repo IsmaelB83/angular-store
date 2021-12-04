@@ -2,6 +2,9 @@
   "scripts": {
     "frontend:install": "cd storefront-frontend && npm install",
     "frontend:build": "cd storefront-frontend && npm run build",
-    "frontend:deploy": "cd storefront-frontend &&  npm run deploy"
+    "backend:install": "cd storefront-backend-api && npm install",
+    "backend:build": "cd storefront-backend-api && npm run build",
+    "frontend:deploy": "cd storefront-frontend &&  npm run deploy",
+    "backend:deploy": "cd storefront-backend-api &&  npm run deploy"
   }
 }
