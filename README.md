@@ -8,6 +8,8 @@ The project  has two main parts:
 
 This repo contains CircleCI integration to achieve CI/CD in AWS. Either way you can find as well the instructions to build & deploy manually each component in your own infrastructure.
 
+You can find this app working in URL: https://udacity-nanodegree-js-iba.s3.us-west-2.amazonaws.com/index.html
+
 ## SHOPPING FLOW
 
 ![MyStore shopping flow](example_flow2.gif)
@@ -16,9 +18,7 @@ This repo contains CircleCI integration to achieve CI/CD in AWS. Either way you 
 
 - [ARCHITECTURE](#ARCHITECTURE)
 - [CI/CD](#CI/CD)
-- [INSTRUCTIONS](#INSTRUCTIONS)
-- [BACKEND](#STORE-BACKEND)
-- [STORE FRONTEND](#STORE-FRONTEND)
+- [INSTRUCTIONS TO MANUAL INSTALLATION](#INSTRUCTIONS-TO-MANUAL-INSTALLATION)
 
 ## ARCHITECTURE
 
