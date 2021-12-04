@@ -13,7 +13,7 @@ jobs:
       - checkout
       - aws-cli/setup
       - run: 
-          name: install node@14.18.1
+          name: Install node@14.18.1
           command: |
               set +e         
               touch $BASH_ENV    
@@ -25,6 +25,13 @@ jobs:
       - run:
           name: verify node version
           command: node --version
+      - run:
+          name: Install EB Cli
+          working_directory: /
+          command: |
+            sudo apt-get -y -qq update
+            sudo apt-get install python3-pip python3-dev build-essential
+            sudo pip3 install awsebcli
       - run:
           name: Front-End Install
           command: |
