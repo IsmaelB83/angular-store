@@ -19,13 +19,13 @@ The database is a RDS service type postgres. Note that it is not required to mak
 
 The express API is deployed in a Beanstalk service. This service needs to be published trough port 443 due to S3 bucket is also HTTPS. And therefore if API is not in HTTPS there is a security error 
 
-![AWS_BEANSTALK_1](../screenshots/aws_beanstal_1.png)
-![AWS_BEANSTALK_2](../screenshots/aws_beanstal_2.png)
-![AWS_BEANSTALK_3](../screenshots/aws_beanstal_3.png)
+![AWS_BEANSTALK_1](../screenshots/aws_beanstalk_1.png)
+![AWS_BEANSTALK_2](../screenshots/aws_beanstalk_2.png)
+![AWS_BEANSTALK_3](../screenshots/aws_beanstalk_3.png)
 
 Another important thing here is to configure in the beanstalk environment all the ENV variables required for the application to run (important to start express in 8081, which is the default port NGINX will redirect traffic):
 
-![AWS_BEANSTALK_4](../screenshots/aws_beanstal_3.png)
+![AWS_BEANSTALK_4](../screenshots/aws_beanstalk_3.png)
 
 ## S3
 
