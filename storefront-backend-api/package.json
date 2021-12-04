@@ -12,6 +12,7 @@
     "watch": "tsc-watch --esModuleInterop src/server.ts --outDir ./dist --onSuccess 'node ./dist/server.js'",
     "test": "db-migrate --env test up && ENV=test npm run jasmine && db-migrate --env test down",
     "createDB": "db-migrate --env dev db:create --config database-create.json storefront && db-migrate --env dev up",
+    "createSCHEMA": "db-migrate --env dev up",
     "dropDB": "db-migrate --env dev db:drop --config database-create.json storefront",
     "fillDB": "ENV=dev node dist/database/initDB.js",
     "createDB_TEST": "db-migrate --env test db:create --config database-create.json storefront_test",

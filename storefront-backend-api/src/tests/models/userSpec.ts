@@ -24,7 +24,6 @@ describe("User Model methods work as required", () => {
   });
   it("authenticate method should return a user + jwt only if password is valid", async () => {
     expect(await store.authenticate(user.email, password)).not.toBeFalsy();
-    //expect(await store.authenticate(user.id, password + "aux")).toThrowError("Wrong authentication");
     try {
       await store.authenticate(user.email, password + "aux");
       expect(false).toEqual(true);

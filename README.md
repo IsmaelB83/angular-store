@@ -14,10 +14,20 @@ Instructions to build whole applications as follows.
 
 ## CONTENTS
 
+- [ARCHITECTURE](#ARCHITECTURE)
 - [INSTRUCTIONS](#INSTRUCTIONS)
 - [BACKEND](#STORE-BACKEND)
 - [STORE FRONTEND](#STORE-FRONTEND)
 
+## ARCHITECTURE
+
+This application uses the following AWS Services:
+1) Database is deployed in an RDS Postgres DB
+2) Backend API is deployed using a Beanstalk for Node applications
+3) Frontend is server trough an S3 Bucket
+
+The architecture diagram is as follows:
+![AWS_Architecture](AWS_Architecture.png)
 
 ## INSTRUCTIONS
 
