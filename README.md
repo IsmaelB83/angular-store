@@ -28,7 +28,9 @@ This application uses the following AWS Services:
 3) Frontend is server trough an S3 Bucket
 
 The architecture diagram is as follows:
-![AWS_Architecture](AWS_Architecture.png)
+![AWS_Architecture](screenshots/AWS_Architecture.png)
+
+For more information regarding Architecture see [ARCHITECTURE DOCUMENT](docs/ARCHITECTURE.md)
 
 ## CI-CD
 
@@ -36,66 +38,7 @@ Within folder .circleci you can find config.yml with all the steps preconfigured
 
 The config.yml file forces CircleCI to use node version 14.18.1. This is due to the existing problem in version 17.1 (which is the default stable version used by CircleCI at the moment) with crypto SSL (more info searching "node 17 digital envelope routines"). 
 
-* Step to install node@14.18.1
-```
-  - run: 
-      name: install node@14.18.1
-      command: |
-          set +e         
-          touch $BASH_ENV    
-          curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.33.5/install.sh | bash
-          echo 'export NVM_DIR="$HOME/.nvm"' >> $BASH_ENV
-          echo '[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"' >> $BASH_ENV
-          echo nvm install 14.18.1 >> $BASH_ENV
-          echo nvm alias default 14.18.1 >> $BASH_ENV
-```
-
-* Install EB Cli
-```
-  - run:
-      name: Install EB Cli
-      working_directory: /
-      command: |
-        sudo apt-get -y -qq update
-        sudo apt-get install python3-pip python3-dev build-essential
-        sudo pip3 install awsebcli
-```
-
-* Install dependencies and build frontend application
-```
-  - run:
-      name: Front-End Install
-      command: |
-        npm run frontend:install
-  - run:
-      name: Front-End Build
-      command: |
-        npm run frontend:build
-```
-
-* Install dependencies and build backend application
-```
-  - run:
-      name: Back-End Install
-      command: |
-        npm run backend:install
-  - run:
-      name: Back-End Build
-      command: |
-        npm run backend:build
-```
-
-* Deploy frontend (to S3 bucket) and backend (to Beanstalk)
-```
-  - run:
-      name: Front-End Deploy
-      command: |
-        npm run frontend:deploy
-  - run:
-      name: Back-End Deploy
-      command: |
-        npm run backend:deploy
-```
+For more information regarding CI/CD pipeline please refer to [CI/CD PILELINE](docs/circleci.md)
 
 ## INSTRUCTIONS TO MANUAL INSTALLATION
 
@@ -105,12 +48,12 @@ To download the repository
 \downloads\git clone https://github.com/IsmaelB83/angular-store.git
 ```
 
-And then enter in directory storefront-backend-api, and follow instructions to start BACKEND API: [BACKEND](#STORE-BACKEND)
+And then enter in directory storefront-backend-api, and follow instructions to start BACKEND API: [BACKEND](storefront-backend-api/README.md)
 ```
 \downloads\cd angular-store\storefront-backend-api\
 ```
 
-With backend-api up and running, follow instructions to start the frontend: [STORE FRONTEND](#STORE-FRONTEND)
+With backend-api up and running, follow instructions to start the frontend: [STORE FRONTEND](storefront-frontend/README.md)
 ```
 \downloads\cd angular-store\storefront-frontend\
 ```
