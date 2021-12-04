@@ -17,7 +17,7 @@ You can find this app working in URL: https://udacity-nanodegree-js-iba.s3.us-we
 ## CONTENTS
 
 - [ARCHITECTURE](#ARCHITECTURE)
-- [CI/CD](#CI/CD)
+- [CI/CD](#CI-CD)
 - [INSTRUCTIONS TO MANUAL INSTALLATION](#INSTRUCTIONS-TO-MANUAL-INSTALLATION)
 
 ## ARCHITECTURE
@@ -30,7 +30,7 @@ This application uses the following AWS Services:
 The architecture diagram is as follows:
 ![AWS_Architecture](AWS_Architecture.png)
 
-## CI/CD
+## CI-CD
 
 Within folder .circleci you can find config.yml with all the steps preconfigured to achieve the CI/CD integration. This file works in conjunction with each bin/deploy.sh files in storefront-backend-api and storefront-frontend. As well as general package.json file (that you can find in this same path):
 
