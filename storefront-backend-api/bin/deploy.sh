@@ -1,1 +1,1 @@
-echo "Pending"ç
+eb deploy
