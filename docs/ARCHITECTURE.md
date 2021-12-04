@@ -6,7 +6,7 @@ This application uses the following AWS Services:
 3) Frontend is server trough an S3 Bucket
 
 The architecture diagram is as follows:
-![AWS_Architecture](AWS_Architecture.png)
+![AWS_Architecture](diagram.png)
 
 ## RDS
 
