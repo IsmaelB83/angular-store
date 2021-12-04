@@ -16,7 +16,8 @@
     "dropDB": "db-migrate --env dev db:drop --config database-create.json storefront",
     "fillDB": "ENV=dev node dist/database/initDB.js",
     "createDB_TEST": "db-migrate --env test db:create --config database-create.json storefront_test",
-    "dropDB_TEST": "db-migrate --env test db:drop --config database-create.json storefront_test"
+    "dropDB_TEST": "db-migrate --env test db:drop --config database-create.json storefront_test",
+    "deploy": "chmod +x bin/deploy.sh && bin/deploy.sh"
   },
   "author": "Udacity",
   "license": "ISC",
