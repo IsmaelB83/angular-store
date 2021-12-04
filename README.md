@@ -50,6 +50,17 @@ The config.yml file forces CircleCI to use node version 14.18.1. This is due to 
           echo nvm alias default 14.18.1 >> $BASH_ENV
 ```
 
+* Install EB Cli
+```
+  - run:
+      name: Install EB Cli
+      working_directory: /
+      command: |
+        sudo apt-get -y -qq update
+        sudo apt-get install python3-pip python3-dev build-essential
+        sudo pip3 install awsebcli
+```
+
 * Install dependencies and build frontend application
 ```
   - run:
