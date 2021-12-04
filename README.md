@@ -28,7 +28,7 @@ This application uses the following AWS Services:
 3) Frontend is server trough an S3 Bucket
 
 The architecture diagram is as follows:
-![AWS_Architecture](screenshots/AWS_Architecture.png)
+![AWS_Architecture](docs/diagram.png)
 
 For more information regarding Architecture see [ARCHITECTURE DOCUMENT](docs/ARCHITECTURE.md)
 
@@ -38,7 +38,7 @@ Within folder .circleci you can find config.yml with all the steps preconfigured
 
 The config.yml file forces CircleCI to use node version 14.18.1. This is due to the existing problem in version 17.1 (which is the default stable version used by CircleCI at the moment) with crypto SSL (more info searching "node 17 digital envelope routines"). 
 
-For more information regarding CI/CD pipeline please refer to [CI/CD PILELINE](docs/circleci.md)
+For more information regarding CI/CD pipeline please refer to [CI/CD PILELINE](docs/CIRCLECI.md)
 
 ## INSTRUCTIONS TO MANUAL INSTALLATION
 
