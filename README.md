@@ -42,6 +42,9 @@ For more information regarding CI/CD pipeline please refer to [CI/CD PILELINE](d
 
 ![circleci_1](screenshots/circleci_build_01_overview.png)
 
+Pipeline diagram:
+![circleci_2](screenshots/circleci_build_04_diagram.png)
+
 ## INSTRUCTIONS TO MANUAL INSTALLATION
 
 To download the repository
