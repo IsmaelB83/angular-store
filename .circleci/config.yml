@@ -42,6 +42,7 @@ jobs:
     docker:
       - image: 'cimg/base:stable'
     steps:
+      - node/install
       - aws-cli/setup
       - run:
           name: Install EB Cli
