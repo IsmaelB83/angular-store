@@ -3,16 +3,12 @@ orbs:
   node: circleci/node@4.8.1
   aws-cli: circleci/aws-cli@1.3.1
 jobs:
-  build_and_deploy:
-    branches:
-      only:
-        - master
+  build:
     docker:
       - image: 'cimg/base:stable'
     steps:
       - node/install
       - checkout
-      - aws-cli/setup
       - run: 
           name: Install node@14.18.1
           command: |
@@ -26,13 +22,6 @@ jobs:
       - run:
           name: verify node version
           command: node --version
-      - run:
-          name: Install EB Cli
-          working_directory: /
-          command: |
-            sudo apt-get -y -qq update
-            sudo apt-get install python3-pip python3-dev build-essential
-            sudo pip3 install awsebcli
       - run:
           name: Front-End Install
           command: |
@@ -49,6 +38,18 @@ jobs:
           name: Back-End Build
           command: |
             npm run backend:build
+  deploy:
+    docker:
+      - image: 'cimg/base:stable'
+    steps:
+      - aws-cli/setup
+      - run:
+          name: Install EB Cli
+          working_directory: /
+          command: |
+            sudo apt-get -y -qq update
+            sudo apt-get install python3-pip python3-dev build-essential
+            sudo pip3 install awsebcli
       - run:
           name: Front-End Deploy
           command: |
@@ -58,6 +59,13 @@ jobs:
           command: |
             npm run backend:deploy
 workflows:
-  build_and_deploy:
+  install:
     jobs:
-      - build_and_deploy
+      - build
+      - deploy:
+          requires:
+            - build
+          filters:
+            branches:
+              only:
+                - master
