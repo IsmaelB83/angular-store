@@ -1,11 +1,9 @@
 version: 2.1
 orbs:
-  # orgs contain basc recipes and reproducible actions (install node, aws, etc.)
   node: circleci/node@4.8.1
   aws-cli: circleci/aws-cli@1.3.1
-  # different jobs are calles later in the workflows sections
 jobs:
-  build:
+  install:
     docker:
       - image: 'cimg/base:stable'
     steps:
@@ -37,22 +35,38 @@ jobs:
           command: |
             npm run frontend:install
       - run:
+          name: Back-End Install
+          command: |
+            npm run backend:install
+  build:
+    docker:
+      - image: 'cimg/base:stable'
+    steps:
+      - run:
           name: Front-End Build
           command: |
             npm run frontend:build
       - run:
-          name: Back-End Install
-          command: |
-            npm run backend:install
-      - run:
           name: Back-End Build
           command: |
             npm run backend:build
+  deploy:
+    docker:
+      - image: 'cimg/base:stable'
+    steps:  
       - run:
-          name: Front-End Deploy
-          command: |
+        name: Front-End Deploy
+        command: |
             npm run frontend:deploy
       - run:
           name: Back-End Deploy
           command: |
             npm run backend:deploy
+workflows:
+  build_and_deploy:
+    jobs:
+      - install
+      - build:
+          requires: install
+      - deploy:
+          requires: build
